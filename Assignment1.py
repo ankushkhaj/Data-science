@@ -1,33 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
-with open('C:/Personal/09142640/Desktop/poem.txt') as poem_file:
-    text = poem_file.readlines()
-    print("This file is {} lines long".format(len(text)))
-    for line in text:
-        print(line)
-
-
-# In[5]:
-
-
-import pandas as pd
-df=pd.read_csv("C:/Personal/09142640/Desktop/NBA_player_of_the_week.csv")
-print(df)
-
-
-# 
-
-# In[201]:
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-get_ipython().run_line_magic('matplotlib', 'inline')
+%matplotlib inline
 plt.figure(figsize=(1,1))
 df=pd.read_csv("C:/Personal/09142640/Desktop/NBA_player_of_the_week1.csv")
 df1=df[df.Season_short==1985]
@@ -83,33 +57,4 @@ plt.title('Top 5 NBA Players with their playing years')
 plt.ylabel('Year')
 plt.xlabel('Player')
 plt.show()
-
-
-# In[8]:
-
-
-# Make the random function consistent and replicable.
-np.random.seed(1221)
-
-# Make a blank data frame.
-df = pd.DataFrame()
-
-# Add a column of random numbers between 0 and 1.
-df['rand'] = np.random.rand(100)
-df['rand_sq'] = df['rand'] ** 2
-df['rand_shift'] = df['rand'] + 2
-
-# When creating a data frame an index column of counts is created, counting from 0.
-# Here we do a few transforms on that index to create some extra columns.
-df['counts_sq'] = df.index ** 2 
-df['counts_sqrt'] = np.sqrt(df.index)
-df
-#plt.plot(df['rand'])
-#plt.show()
-
-
-# In[ ]:
-
-
-
 
