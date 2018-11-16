@@ -1,0 +1,27 @@
+1.What's the most expensive listing? What else can you tell me about the listing?
+select * from public.madrid_listings order by price desc
+limit 1
+--Schönes Traumhaus, 1001 Nacht is the most expensive listing with price of 1200
+--Host name is Maryam and neighbourhood is Este.Its availability is for 364 days out of 365 days
+--Minimum nights to stay in this place is 7.This place has been listed only 1 time
+
+
+2.What neighborhoods seem to be the most popular?
+select neighbourhood,count(neighbourhood) as popularity_index from public.madrid_listings group by neighbourhood 
+order by count(neighbourhood) desc
+limit 1
+--Centro is the most popular neighbourhood with popularity index of 3766
+
+3.What time of year is the cheapest time to go to your city? What about the busiest?
+
+
+select *
+ from public.madrid_listings where number_of_reviews <=2 and last_review is not null order by 
+price asc
+
+--cheapest time to go is june
+select SUBSTRING(TO_CHAR(last_review,'YYYY MM DD'),6,2),COUNT(SUBSTRING(TO_CHAR(last_review,'YYYY MM DD'),6,2)) as counting 
+ from public.madrid_listings group by SUBSTRING(TO_CHAR(last_review,'YYYY MM DD'),6,2) order by 
+COUNT(SUBSTRING(TO_CHAR(last_review,'YYYY MM DD'),6,2)) desc
+limit 1
+--September is the busiest time to go
