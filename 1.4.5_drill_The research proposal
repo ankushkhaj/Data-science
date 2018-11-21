@@ -1,0 +1,20 @@
+Will new uniforms help a gym's business?
+
+The problem
+Gym business is not doing so great.Gym owners are thinking for new initiatives in order  to get more profits for their business
+
+The potential solution
+Hypothesis:Introducing new uniform is a new initiative to improve gym business.This may bring some new excitement to the staff and eventually help to bring new customers.Currently there is no dress code for the gym and its hard to differentiate between staff and customers.Customers feel that by having a uniform, they will feel more satisfied about the quality of service.
+
+The method of testing the solution
+Firstly we will use A/B testing to validate our hypothesis.
+1.We will have two versions -new uniform in one branch and no uniform in the other branch in the same area
+2.We will divide the male/female staff  in two groups-One group having 10 staff workers in 1 branch having the new uniform and  10 workers with no uniform in other branch in the same area
+3.Our hypothesis is that introducing new uniform will improve gym's business.
+4.Outcomes comes out to be the  new uniform has improved gyms business.In first 3 months, the monthly subscriptions have increased by average of 3000 customers and 2000 new customers have been added  so far.This new enrollements and extended subscriptions have increased the revenue by $50000 which is a significant change.The key metric is the increase of memberships extensions  and new joinees in the period of 3 months.If the business goes up consistently for 3 months , then new uniform will be introduced to other branch and similar tests will be performed for that branch as well.If the business is not good for 3 continious months, then the new change will be stopped for all the branch.If this growth stays for additional 3 months and more ,then Gym owners woll be able to buy that property instead of leasing them every year.
+
+t-Test Experiment-
+We are using  t-test in order to do  t- value testing to verify that there is no statistically significant difference between the two sample populations for new uniform experiment  used in  A/B testing to validate our hypothesis as mentioned above.Here the formula for t value is -
+t=y1¯−y2¯s21/N1+s22/N2
+Where numerator is the difference of the mean of the two populations and denominator is the variance and sample size
+Here if the p value is less than .05 then we will either reject or accept the null hypothessus based on its t value(greater or less) .But if p value is more than 0.05% , then we will take t value in consideration
